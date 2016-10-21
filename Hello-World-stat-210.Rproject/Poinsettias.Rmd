@@ -1,0 +1,27 @@
+---
+title: "Poinsettias"
+author: "Bailey Warren"
+date: "October 20, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, comment="")
+```
+
+```{r}
+load("poin.RDA")
+head(Poinsettias)
+```
+
+Here is a table and a barplot
+
+```{r}
+table(Poinsettias$color)
+barplot(table(Poinsettias$color), xlab="color", ylab="Amount of Flowers", main="Poinsettia Colors", col= c("pink", "red","white") )
+```
+
+Here is a statistical summary of the dataset
+```{r}
+summary(Poinsettias)
+```
